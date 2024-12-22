@@ -1,0 +1,252 @@
+/* Modern aesthetic variables */
+:root {
+  --primary: #2D3436;
+  --secondary: #636E72;
+  --accent: #0984E3;
+  --background: #FFFFFF;
+  --surface: #F9FAFB;
+  --text: #2D3436;
+  --border: #E2E8F0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  padding-top: 60px;
+  line-height: 1.6;
+}
+
+/* Refined header */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.98);
+  padding: 12px 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-right: 400px;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+  flex-grow: 1;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Elegant sign-out button */
+.sign-out-btn {
+  background-color: var(--surface);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  padding: 8px 24px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left: 10px;
+  margin-right: 70px;
+}
+
+.sign-out-btn:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Refined CTA button */
+.cta-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Minimalist hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 40px;
+  background-color: var(--surface);
+  margin-top: 80px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin-left: 20px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+  text-align: left;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--secondary);
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.hero-description {
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.6;
+  width: 87%;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.hero-description:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Clean footer */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.footer p {
+  margin-bottom: 16px;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* Additional aesthetic improvements */
+::selection {
+  background-color: rgba(9, 132, 227, 0.1);
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, textarea {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Subtle animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out forwards;
+}

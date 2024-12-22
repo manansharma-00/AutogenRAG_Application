@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - ENV=production
+
+  frontend:
+    build:
+      context: ./assgnmnt-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80" # React app will be served by Nginx on port 80
+    environment:
+      - NODE_ENV=production

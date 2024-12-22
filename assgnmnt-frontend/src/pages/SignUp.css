@@ -1,0 +1,127 @@
+/* Overall body styling */
+body {
+  font-family: 'Arial', sans-serif; /* Standard sans-serif font for clean design */
+  background-color: #f2f2f2; /* Light gray background for a soft look */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Signup container */
+.signup-container {
+  background-color: #ffffff; /* White background for contrast */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  padding: 20px 70px; /* Reduced padding for compact form */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 400px; /* Restrict width for better focus */
+  margin: 0 auto; /* Center horizontally on the page */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Signup heading */
+.signup-container h1 {
+  color: #333333; /* Dark gray for strong contrast */
+  text-align: center; /* Center text alignment */
+  font-size: 26px; /* Slightly reduced font size for compactness */
+  margin-bottom: 20px; /* Reduced margin for tighter layout */
+}
+
+/* Signup form */
+.signup-form {
+  width: 100%; /* Full container width */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack input fields vertically */
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 10px; /* Reduced spacing between fields */
+}
+
+.form-group label {
+  color: #555555; /* Medium gray for readability */
+  font-size: 14px; /* Standard font size for labels */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.form-group input {
+  width: 94%; /* Full container width */
+  padding: 10px; /* Comfortable padding for inputs */
+  border: 1px solid  #0c5eb6; /* Light gray border */
+  border-radius: 6px; /* Slightly rounded corners */
+  font-size: 14px; /* Standard input font size */
+  transition: border-color 0.3s ease; /* Smooth transition on focus */
+  background-color: #f6e7e7;
+  color: #000;
+}
+
+.form-group input:focus {
+  outline-color: #007bff; /* Blue focus color */
+  border-color: #007bff; /* Blue border on focus */
+  border: 2px solid #cccccc; /* Light gray border */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Subtle glow effect */
+  background-color: #f6e7e7;
+  color: #000;
+}
+
+/* Signup button */
+.signup-btn {
+  background-color: #007bff; /* Blue background for primary action */
+  color: white; /* White text for contrast */
+  border: none; /* No border for clean design */
+  padding: 10px; /* Reduced padding for compact button */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 16px; /* Standard button font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.signup-btn:disabled {
+  background-color: #0056b3;
+  cursor: not-allowed; 
+}
+
+.signup-btn:hover:not(:disabled) {
+  background-color: #012c5b; /* Darker blue on hover */
+}
+
+/* Policy notice */
+.policy-notice {
+  text-align: center; /* Center align text */
+  font-size: 12px; /* Small font size for subtle text */
+  color: #888888; /* Light gray for less emphasis */
+  margin-top: 10px; /* Space above policy notice */
+}
+
+.policy-notice a {
+  color: #007bff; /* Blue for links */
+  text-decoration: none; /* Remove underline for clean design */
+}
+
+.policy-notice a:hover {
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* Message styling */
+.message {
+  color: #e67e22; /* Orange for warnings or messages */
+  text-align: center; /* Center align messages */
+  margin-top: 10px; /* Space above message */
+}
+
+/* Illustration styling */
+.illustration {
+  margin-top: 15px; /* Space above illustration */
+  text-align: center; /* Center align image */
+}
+
+.illustration img {
+  max-width: 100%; /* Responsive image scaling */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px; /* Space between image and content */
+}
